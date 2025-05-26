@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .certificate-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            min-height: 500px;
+            height: auto;
+            margin: 20px 0;
+            background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') no-repeat center center;
+            background-size: cover;
+            border: 10px solid #4a2c82;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+        .certificate-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        
+        .certificate-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .header {
+            border-bottom: 2px solid #9b59b6;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: clamp(24px, 5vw, 36px);
+            margin: 0;
+            color: #f1c40f;
+            text-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+        }
+        
+        h2 {
+            font-size: clamp(18px, 4vw, 24px);
+            margin: 10px 0;
+            color: #fff;
+        }
+        
+        .main-text {
+            font-size: clamp(14px, 3vw, 18px);
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        
+        .student-name {
+            font-size: clamp(20px, 5vw, 32px);
+            font-weight: bold;
+            color: #f1c40f;
+            margin: 15px 0;
+            text-shadow: 0 0 8px rgba(241, 196, 15, 0.5);
+            word-break: break-word;
+        }
+        
+        .course-name {
+            font-size: clamp(18px, 4vw, 28px);
+            font-style: italic;
+            color: #9b59b6;
+            margin: 15px 0;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 2px solid #9b59b6;
+            padding-top: 15px;
+            gap: 10px;
+        }
+        
+        .signature {
+            width: 45%;
+            min-width: 120px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .signature-line {
+            border-top: 1px solid #fff;
+            margin: 5px auto 8px;
+            width: 80%;
+        }
+        
+        .signature-title {
+            margin: 0;
+            font-size: clamp(12px, 3vw, 16px);
+        }
+        
+        .signature-name {
+            font-weight: bold;
+            margin-top: 5px;
+            color: #f1c40f;
+            font-size: clamp(14px, 3vw, 18px);
+            display: block;
+            word-break: break-word;
+        }
+        
+        .date {
+            margin-bottom: 20px;
+            font-size: clamp(12px, 3vw, 16px);
+            width: 100%;
+            order: -1;
+            text-align: center;
+        }
+        
+        .decoration {
+            position: absolute;
+            font-size: clamp(100px, 30vw, 300px);
+            color: rgba(255, 255, 255, 0.05);
+            z-index: 0;
+        }
+        
+        .left-decoration {
+            left: 10px;
+            top: 30px;
+        }
+        
+        .right-decoration {
+            right: 10px;
+            bottom: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .certificate-container {
+                padding: 40px;
+                border-width: 15px;
+            }
+            
+            .date {
+                width: auto;
+                order: 0;
+                margin-bottom: 40px;
+            }
+            
+            .signature {
+                width: 200px;
+            }
+            
+            .footer {
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <div class="decoration left-decoration">✧</div>
+        <div class="decoration right-decoration">✧</div>
+        
+        <div class="certificate-content">
+            <div class="header">
+                <h1>CERTIFICADO</h1>
+                <h2>Certificamos que</h2>
+            </div>
+            
+            <div class="main-text">
+                <div class="student-name">LUCAS JAPONEIS HIDESHI KABESSUDO</div>
+                <p>completou com êxito o curso de</p>
+                <div class="course-name">Astronauta</div>
+                <p>com carga horária de 25 horas, demonstrando dedicação e competência na aquisição dos conhecimentos propostos.</p>
+            </div>
+            
+            <div class="footer">
+                <div class="signature">
+                    <div class="signature-line"></div>
+                    <p class="signature-title">Diretor Acadêmico</p>
+                    <span class="signature-name">SICKÃO BATISTA</span>
+                </div>
+                <div class="date">26/05/2025</div>
+                <div class="signature">
+                    <div class="signature-line"></div>
+                    <p class="signature-title">Coordenador do Curso</p>
+                    <span class="signature-name">POLARISXXX PESSOA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
